@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://semenoffdani-cmyk.github.io/volt71-site/sitemap.xml
