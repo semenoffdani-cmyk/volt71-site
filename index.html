@@ -179,6 +179,8 @@ nav a:hover,
   color:#fff;
   font-size:25px;
   cursor:pointer;
+  padding:8px;
+  line-height:1;
 }
 
 /* HERO */
@@ -930,6 +932,47 @@ footer{
     padding:65px 0;
   }
 }
+
+/* MOBILE MENU */
+
+@media(max-width:950px){
+
+  nav.open{
+    display:flex !important;
+    position:absolute;
+    top:65px;
+    left:0;
+    right:0;
+    margin:0;
+    padding:18px;
+    flex-direction:column;
+    gap:0;
+    background:#0b0d10;
+    border-bottom:1px solid #2b323a;
+    box-shadow:0 16px 30px rgba(0,0,0,.28);
+  }
+
+  nav.open a{
+    display:block;
+    padding:15px 4px;
+    color:#fff;
+    font-size:14px;
+    border-bottom:1px solid #242a31;
+  }
+
+  nav.open a:last-child{
+    border-bottom:0;
+  }
+
+  #menu{
+    position:relative;
+    z-index:55;
+    min-width:42px;
+    min-height:42px;
+    display:grid;
+    place-items:center;
+  }
+}
 </style>
 </head>
 
@@ -955,7 +998,13 @@ footer{
       +7 (939) 859-71-49
     </a>
 
-    <button id="menu" type="button" aria-label="Открыть меню" aria-expanded="false">
+    <button
+      id="menu"
+      type="button"
+      aria-label="Открыть меню"
+      aria-expanded="false"
+      aria-controls="nav"
+    >
       ☰
     </button>
 
@@ -1664,58 +1713,93 @@ footer{
 const menu = document.getElementById('menu');
 const nav = document.getElementById('nav');
 
-menu?.addEventListener('click', () => {
+function closeMenu(){
 
-  const isOpen = nav.classList.toggle('open');
+  nav.classList.remove('open');
 
-  menu.setAttribute(
-    'aria-expanded',
-    isOpen ? 'true' : 'false'
-  );
+  nav.style.display = '';
+  nav.style.position = '';
+  nav.style.top = '';
+  nav.style.left = '';
+  nav.style.right = '';
+  nav.style.padding = '';
+  nav.style.background = '';
+  nav.style.flexDirection = '';
+  nav.style.borderBottom = '';
+  nav.style.boxShadow = '';
 
-  if(isOpen){
+  menu.setAttribute('aria-expanded','false');
+  menu.setAttribute('aria-label','Открыть меню');
 
-    nav.style.display = 'flex';
-    nav.style.position = 'absolute';
-    nav.style.top = '65px';
-    nav.style.left = '0';
-    nav.style.right = '0';
-    nav.style.padding = '18px';
-    nav.style.background = '#0b0d10';
-    nav.style.flexDirection = 'column';
-    nav.style.borderBottom = '1px solid #2b323a';
+  menu.textContent = '☰';
+}
 
+function openMenu(){
+
+  nav.classList.add('open');
+
+  nav.style.display = 'flex';
+  nav.style.position = 'absolute';
+  nav.style.top = '65px';
+  nav.style.left = '0';
+  nav.style.right = '0';
+  nav.style.padding = '18px';
+  nav.style.background = '#0b0d10';
+  nav.style.flexDirection = 'column';
+  nav.style.borderBottom = '1px solid #2b323a';
+  nav.style.boxShadow = '0 16px 30px rgba(0,0,0,.28)';
+
+  menu.setAttribute('aria-expanded','true');
+  menu.setAttribute('aria-label','Закрыть меню');
+
+  menu.textContent = '×';
+}
+
+menu?.addEventListener('click', function(event){
+
+  event.stopPropagation();
+
+  if(nav.classList.contains('open')){
+    closeMenu();
   }else{
-
-    nav.style.display = '';
-    nav.style.position = '';
-    nav.style.top = '';
-    nav.style.left = '';
-    nav.style.right = '';
-    nav.style.padding = '';
-    nav.style.background = '';
-    nav.style.flexDirection = '';
-    nav.style.borderBottom = '';
-
+    openMenu();
   }
 
 });
 
+document.querySelectorAll('nav a').forEach(function(link){
 
-document.querySelectorAll('nav a').forEach(a => {
-
-  a.addEventListener('click', () => {
-
-    nav.classList.remove('open');
-
-    nav.style.display = '';
-
-    menu.setAttribute(
-      'aria-expanded',
-      'false'
-    );
-
+  link.addEventListener('click', function(){
+    closeMenu();
   });
+
+});
+
+document.addEventListener('click', function(event){
+
+  if(
+    nav.classList.contains('open') &&
+    !nav.contains(event.target) &&
+    event.target !== menu
+  ){
+    closeMenu();
+  }
+
+});
+
+document.addEventListener('keydown', function(event){
+
+  if(event.key === 'Escape'){
+    closeMenu();
+  }
+
+});
+
+window.addEventListener('resize', function(){
+
+  if(window.innerWidth > 950){
+    closeMenu();
+  }
 
 });
 </script>
