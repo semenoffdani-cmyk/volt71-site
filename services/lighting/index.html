@@ -3,662 +3,295 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Монтаж освещения в Туле — ВОЛЬТ71</title>
-  <meta name="description" content="Монтаж и подключение освещения в Туле и Тульской области. Освещение домов, складов и коммерческих помещений. ВОЛЬТ71 — электромонтажные работы.">
-
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#0F1114">
-
-  <link rel="canonical" href="https://semenoffdani-cmyk.github.io/volt71-site/services/lighting/">
-
-  <meta property="og:title" content="Монтаж освещения в Туле — ВОЛЬТ71">
-  <meta property="og:description" content="Монтаж и подключение освещения для домов, складов и коммерческих помещений в Туле и Тульской области.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://semenoffdani-cmyk.github.io/volt71-site/services/lighting/">
-
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ffb300'/%3E%3Cpath d='M36 7 18 36h12l-3 21 19-30H34z' fill='%230b0d10'/%3E%3C/svg%3E">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Монтаж освещения",
-    "description": "Монтаж и подключение освещения в частных домах, складах и коммерческих помещениях в Туле и Тульской области.",
-    "provider": {
-      "@type": "Electrician",
-      "name": "ВОЛЬТ71",
-      "telephone": "+79398597149",
-      "url": "https://semenoffdani-cmyk.github.io/volt71-site/"
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Тула"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Тульская область"
-      }
-    ],
-    "serviceType": "Монтаж освещения"
-  }
-  </script>
-
+  <title>Монтаж освещения | Вольт71</title>
+  <meta name="description" content="Монтаж и подключение освещения, светильников, выключателей и подсветки в квартирах, частных домах и коммерческих помещениях. Вольт71.">
   <style>
     :root {
-      --bg: #0F1114;
-      --bg2: #080A0C;
-      --text: #F5F6F8;
-      --muted: #A7ACB3;
-      --line: #292D32;
-      --accent: #FFB300;
-      --card: #15181C;
-      --max: 1180px;
+      --bg: #111214;
+      --panel: #1b1d20;
+      --text: #f4f4f4;
+      --muted: #b8bbc0;
+      --yellow: #f5c542;
+      --line: #33363b;
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: "Manrope", sans-serif;
+      margin: 0;
       background: var(--bg);
       color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
     }
-
     a {
       color: inherit;
       text-decoration: none;
     }
-
     .container {
-      width: min(100% - 40px, var(--max));
+      width: min(1100px, calc(100% - 32px));
       margin: 0 auto;
     }
-
     header {
       border-bottom: 1px solid var(--line);
-      background: rgba(15, 17, 20, .96);
+      padding: 18px 0;
     }
-
-    .nav {
-      min-height: 78px;
+    .header-inner {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .logo {
-      font-size: 25px;
-      font-weight: 800;
-      letter-spacing: -1px;
-    }
-
-    .logo span {
-      color: var(--accent);
-    }
-
-    .nav-phone {
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .hero {
-      padding: 90px 0 80px;
-      background:
-        radial-gradient(circle at 80% 20%, rgba(255,179,0,.12), transparent 30%),
-        linear-gradient(180deg, var(--bg), var(--bg2));
-    }
-
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 22px;
-      color: var(--accent);
-      font-family: "Roboto Mono", monospace;
-      font-size: 13px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      max-width: 850px;
-      font-size: clamp(42px, 7vw, 78px);
-      line-height: .98;
-      letter-spacing: -3px;
-      margin-bottom: 28px;
-    }
-
-    .hero p {
-      max-width: 720px;
-      color: var(--muted);
-      font-size: 19px;
-      margin-bottom: 34px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 54px;
-      padding: 0 24px;
-      border-radius: 8px;
-      font-weight: 800;
-      transition: .2s ease;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #111;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      border: 1px solid var(--line);
-      background: #15181C;
-    }
-
-    section {
-      padding: 82px 0;
-    }
-
-    .section-head {
-      margin-bottom: 40px;
-    }
-
-    .section-head h2 {
-      font-size: clamp(30px, 5vw, 48px);
-      line-height: 1.05;
-      letter-spacing: -1.5px;
-      margin-bottom: 14px;
-    }
-
-    .section-head p {
-      max-width: 700px;
-      color: var(--muted);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .card {
-      padding: 28px;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-    }
-
-    .card-number {
-      color: var(--accent);
-      font-family: "Roboto Mono", monospace;
-      font-size: 13px;
-      margin-bottom: 28px;
-    }
-
-    .card h3 {
-      font-size: 21px;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .dark {
-      background: var(--bg2);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .objects {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-    }
-
-    .object {
-      padding: 22px;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      background: #111418;
-      font-weight: 700;
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 12px;
-    }
-
-    .step {
-      border-top: 2px solid var(--accent);
-      padding-top: 18px;
-    }
-
-    .step strong {
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    .step span {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .note {
-      margin-top: 28px;
-      padding: 24px;
-      border-left: 3px solid var(--accent);
-      background: #15181C;
-      color: var(--muted);
-    }
-
-    .cta {
-      text-align: center;
-      padding: 100px 0;
-      background:
-        radial-gradient(circle at 50% 0%, rgba(255,179,0,.13), transparent 35%),
-        var(--bg2);
-    }
-
-    .cta h2 {
-      max-width: 760px;
-      margin: 0 auto 18px;
-      font-size: clamp(36px, 6vw, 60px);
-      line-height: 1;
-      letter-spacing: -2px;
-    }
-
-    .cta p {
-      max-width: 620px;
-      margin: 0 auto 30px;
-      color: var(--muted);
-    }
-
-    footer {
-      padding: 34px 0 100px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .footer-inner {
-      display: flex;
       justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
     }
-
-    @media (max-width: 850px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .objects {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .steps {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 30px;
-      }
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 1px;
     }
-
-    @media (max-width: 600px) {
-      .container {
-        width: min(100% - 28px, var(--max));
-      }
-
-      .nav {
-        min-height: 68px;
-      }
-
-      .nav-phone {
-        font-size: 14px;
-      }
-
-      .hero {
-        padding: 65px 0 60px;
-      }
-
-      h1 {
-        font-size: 43px;
-        letter-spacing: -2px;
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-
-      section {
-        padding: 62px 0;
-      }
-
-      .grid,
-      .objects,
-      .steps {
-        grid-template-columns: 1fr;
-      }
-
-      .buttons {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-      }
+    .logo span { color: var(--yellow); }
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    nav a:hover,
+    .back:hover {
+      color: var(--yellow);
+    }
+    .hero {
+      padding: 68px 0 54px;
+    }
+    .back {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: var(--yellow);
+      font-size: 14px;
+    }
+    .eyebrow {
+      color: var(--yellow);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+    h1 {
+      max-width: 850px;
+      margin: 12px 0 20px;
+      font-size: clamp(34px, 6vw, 58px);
+      line-height: 1.1;
+    }
+    .hero p {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 14px 22px;
+      border-radius: 6px;
+      background: var(--yellow);
+      color: #171717;
+      font-weight: 800;
+    }
+    .button:hover { background: #ffd85e; }
+    section { padding: 42px 0; }
+    h2 {
+      margin: 0 0 22px;
+      font-size: clamp(26px, 4vw, 36px);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--yellow);
+      font-size: 19px;
+    }
+    .card p,
+    .card li {
+      color: var(--muted);
+    }
+    .card ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+    .note {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+      color: var(--muted);
+    }
+    .note strong { color: var(--yellow); }
+    .contact {
+      margin: 30px 0 60px;
+      padding: 34px;
+      border-radius: 12px;
+      background: #202226;
+      border: 1px solid var(--line);
+    }
+    .contact p { color: var(--muted); }
+    footer {
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 650px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 44px; }
+      .contact { padding: 24px; }
+      nav { gap: 12px; }
     }
   </style>
 </head>
-
 <body>
-
-<header>
-  <div class="container nav">
-
-    <a class="logo" href="../../" aria-label="ВОЛЬТ71 — электромонтаж в Туле">
-      ВОЛЬТ<span>71</span>
-    </a>
-
-    <a class="nav-phone" href="tel:+79398597149">
-      +7 (939) 859-71-49
-    </a>
-
-  </div>
-</header>
-
-<main>
-
-  <section class="hero">
-    <div class="container">
-
-      <div class="eyebrow">
-        Электромонтажные работы · Тула
-      </div>
-
-      <h1>
-        Монтаж освещения в Туле
-      </h1>
-
+  <header>
+    <div class="container header-inner">
+      <a class="logo" href="../../index.html">ВОЛЬТ<span>71</span></a>
+      <nav>
+        <a href="../../index.html#services">Услуги</a>
+        <a href="../../index.html#about">О компании</a>
+        <a href="../../index.html#contact">Контакты</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container hero">
+      <a class="back" href="../../index.html#services">← Все услуги</a>
+      <div class="eyebrow">Свет и электромонтаж</div>
+      <h1>Монтаж и подключение освещения</h1>
       <p>
-        Монтаж, подключение и модернизация освещения
-        для частных домов, складов и коммерческих помещений.
+        Выполняем монтаж и подключение освещения в квартирах,
+        частных домах и коммерческих помещениях. Помогаем организовать
+        удобное расположение светильников, выключателей и подсветки
+        с учётом назначения и особенностей каждого помещения.
       </p>
-
-      <div class="buttons">
-        <a class="btn btn-primary" href="../../#contact">
-          Рассчитать стоимость
-        </a>
-
-        <a class="btn btn-secondary" href="tel:+79398597149">
-          Позвонить
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <section>
-    <div class="container">
-
-      <div class="section-head">
-        <h2>Какие работы выполняем</h2>
-
-        <p>
-          От отдельных светильников и линий до комплексного монтажа
-          освещения на объекте.
-        </p>
-      </div>
-
-      <div class="grid">
-
-        <article class="card">
-          <div class="card-number">01</div>
-          <h3>Монтаж освещения</h3>
-          <p>
-            Прокладка линий и подключение светильников
-            в соответствии с задачами объекта.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-number">02</div>
-          <h3>Освещение частного дома</h3>
-          <p>
-            Основное, дополнительное и функциональное освещение
-            помещений дома.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-number">03</div>
-          <h3>Освещение склада</h3>
-          <p>
-            Организация линий освещения для складских помещений
-            и рабочих зон.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-number">04</div>
-          <h3>Коммерческое освещение</h3>
-          <p>
-            Монтаж освещения в офисах, магазинах,
-            производственных и других коммерческих помещениях.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-number">05</div>
-          <h3>Розетки и выключатели</h3>
-          <p>
-            Подключение выключателей, розеток и управляющих элементов
-            осветительных линий.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-number">06</div>
-          <h3>Модернизация</h3>
-          <p>
-            Замена существующих линий, перенос точек
-            и обновление системы освещения.
-          </p>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <section class="dark">
-    <div class="container">
-
-      <div class="section-head">
-        <h2>Для каких объектов</h2>
-
-        <p>
-          Работаем с разными типами объектов и отдельными задачами
-          по электрике.
-        </p>
-      </div>
-
-      <div class="objects">
-        <div class="object">Частные дома</div>
-        <div class="object">Склады</div>
-        <div class="object">Коммерческие помещения</div>
-        <div class="object">Отдельные работы</div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <section>
-    <div class="container">
-
-      <div class="section-head">
-        <h2>Как проходит работа</h2>
-
-        <p>
-          Понятный процесс от первого обращения до готового результата.
-        </p>
-      </div>
-
-      <div class="steps">
-
-        <div class="step">
-          <strong>01 · Заявка</strong>
-          <span>Рассказываете о задаче.</span>
-        </div>
-
-        <div class="step">
-          <strong>02 · Обсуждение</strong>
-          <span>Уточняем особенности объекта.</span>
-        </div>
-
-        <div class="step">
-          <strong>03 · Расчёт</strong>
-          <span>Определяем необходимый объём работ.</span>
-        </div>
-
-        <div class="step">
-          <strong>04 · Монтаж</strong>
-          <span>Выполняем электромонтаж.</span>
-        </div>
-
-        <div class="step">
-          <strong>05 · Результат</strong>
-          <span>Проверяем выполненную работу.</span>
-        </div>
-
-      </div>
-
-      <div class="note">
-        Стоимость зависит от площади объекта, количества точек,
-        состояния существующей электрики и технических особенностей.
-        Для предварительной оценки можно отправить фотографии,
-        план помещения или описание задачи.
-      </div>
-
-    </div>
-  </section>
-
-
-  <section class="dark">
-    <div class="container">
-
-      <div class="section-head">
-        <h2>Почему ВОЛЬТ71</h2>
-      </div>
-
-      <div class="grid">
-
-        <article class="card">
-          <h3>Большой практический опыт</h3>
-          <p>
-            Практический подход к электромонтажным задачам
-            разного уровня сложности.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Один исполнитель</h3>
-          <p>
-            Можно выполнить как отдельную работу,
-            так и комплексный электромонтаж объекта.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Понятная стоимость</h3>
-          <p>
-            Объём работ обсуждается до начала монтажа,
-            без выдуманных тарифов и скрытых обещаний.
-          </p>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <section class="cta">
-    <div class="container">
-
-      <h2>Нужен монтаж освещения?</h2>
-
-      <p>
-        Расскажите о задаче — обсудим объект,
-        необходимые работы и возможный объём монтажа.
-      </p>
-
-      <div class="buttons" style="justify-content:center;">
-
-        <a class="btn btn-primary" href="../../#contact">
-          Рассчитать стоимость
-        </a>
-
-        <a class="btn btn-secondary" href="tel:+79398597149">
-          +7 (939) 859-71-49
-        </a>
-
-      </div>
-
-    </div>
-  </section>
-
-</main>
-
-
-<footer>
-  <div class="container footer-inner">
-
-    <div>
-      <strong style="color:#F5F6F8;">ВОЛЬТ71</strong><br>
-      Электромонтажные работы в Туле и Тульской области
-    </div>
-
-    <div>
-      <a href="../../privacy.html">
-        Политика обработки персональных данных
+      <a class="button" href="../../index.html#contact">
+        Обсудить проект
       </a>
     </div>
-
-  </div>
-</footer>
-
+    <section>
+      <div class="container">
+        <h2>Что выполняем</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Установка светильников</h3>
+            <p>
+              Устанавливаем и подключаем потолочные, настенные
+              и другие виды светильников с учётом условий монтажа.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Монтаж выключателей</h3>
+            <p>
+              Устанавливаем и подключаем выключатели,
+              организуем управление освещением в помещении.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Подсветка помещений</h3>
+            <p>
+              Выполняем подключение предусмотренной проектом
+              подсветки ниш, потолков, рабочих зон и других элементов.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Замена и модернизация</h3>
+            <p>
+              Заменяем устаревшие светильники, обновляем подключение
+              и помогаем адаптировать освещение под новые задачи.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h2>Этапы работы</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>01. Обсуждение задачи</h3>
+            <p>
+              Уточняем назначение помещения, пожелания по освещению
+              и особенности существующей электропроводки.
+            </p>
+          </article>
+          <article class="card">
+            <h3>02. Планирование</h3>
+            <p>
+              Определяем расположение светильников, выключателей,
+              линий подключения и необходимые материалы.
+            </p>
+          </article>
+          <article class="card">
+            <h3>03. Монтаж и подключение</h3>
+            <p>
+              Устанавливаем предусмотренные элементы освещения
+              и выполняем необходимые электрические подключения.
+            </p>
+          </article>
+          <article class="card">
+            <h3>04. Проверка</h3>
+            <p>
+              Проверяем работу светильников и органов управления
+              после завершения монтажа.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h2>Стоимость работ</h2>
+        <div class="note">
+          <strong>
+            Стоимость зависит от количества светильников и сложности монтажа.
+          </strong>
+          <p>
+            На цену влияют тип осветительных приборов, высота потолков,
+            необходимость прокладки новых линий, особенности крепления
+            и объём подключений. Стоимость материалов и работ
+            уточняется после обсуждения задачи.
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="contact">
+        <h2>Хотите обновить освещение?</h2>
+        <p>
+          Расскажите о помещении и желаемом результате.
+          Обсудим расположение светильников, объём монтажа
+          и подходящий вариант подключения.
+        </p>
+        <a class="button" href="../../index.html#contact">
+          Связаться с нами
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container footer-inner">
+      <span>© ВОЛЬТ71 — электромонтажные работы</span>
+      <a href="../../index.html">На главную</a>
+    </div>
+  </footer>
 </body>
 </html>
