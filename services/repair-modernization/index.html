@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ремонт и модернизация электрики | Вольт71</title>
+  <meta name="description" content="Ремонт, диагностика и модернизация электропроводки в квартирах, частных домах и коммерческих помещениях. Вольт71.">
+  <style>
+    :root {
+      --bg: #111214;
+      --panel: #1b1d20;
+      --text: #f4f4f4;
+      --muted: #b8bbc0;
+      --yellow: #f5c542;
+      --line: #33363b;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container {
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .logo span { color: var(--yellow); }
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    nav a:hover, .back:hover { color: var(--yellow); }
+    .hero { padding: 68px 0 54px; }
+    .back {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: var(--yellow);
+      font-size: 14px;
+    }
+    .eyebrow {
+      color: var(--yellow);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+    h1 {
+      max-width: 850px;
+      margin: 12px 0 20px;
+      font-size: clamp(34px, 6vw, 58px);
+      line-height: 1.1;
+    }
+    .hero p {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 14px 22px;
+      border-radius: 6px;
+      background: var(--yellow);
+      color: #171717;
+      font-weight: 800;
+    }
+    .button:hover { background: #ffd85e; }
+    section { padding: 42px 0; }
+    h2 {
+      margin: 0 0 22px;
+      font-size: clamp(26px, 4vw, 36px);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--yellow);
+      font-size: 19px;
+    }
+    .card p, .card li { color: var(--muted); }
+    .card ul { padding-left: 20px; margin-bottom: 0; }
+    .note {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+      color: var(--muted);
+    }
+    .note strong { color: var(--yellow); }
+    .contact {
+      margin: 30px 0 60px;
+      padding: 34px;
+      border-radius: 12px;
+      background: #202226;
+      border: 1px solid var(--line);
+    }
+    .contact p { color: var(--muted); }
+    footer {
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 650px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 44px; }
+      .contact { padding: 24px; }
+      nav { gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a class="logo" href="../../index.html">ВОЛЬТ<span>71</span></a>
+      <nav>
+        <a href="../../index.html#services">Услуги</a>
+        <a href="../../index.html#about">О компании</a>
+        <a href="../../index.html#contact">Контакты</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container hero">
+      <a class="back" href="../../index.html#services">← Все услуги</a>
+      <div class="eyebrow">Диагностика и электромонтаж</div>
+      <h1>Ремонт и модернизация электрики</h1>
+      <p>Находим причины неисправностей, обновляем изношенные участки электропроводки и помогаем адаптировать электросистему под новые нагрузки и потребности объекта.</p>
+      <a class="button" href="../../index.html#contact">Обсудить задачу</a>
+    </div>
+    <section>
+      <div class="container">
+        <h2>Что выполняем</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Поиск неисправностей</h3>
+            <p>Проверяем проблемные участки электросети, выявляем возможные причины сбоев и определяем необходимый объём ремонта.</p>
+          </article>
+          <article class="card">
+            <h3>Ремонт электропроводки</h3>
+            <p>Выполняем ремонт и замену повреждённых участков проводки и ненадёжных соединений.</p>
+          </article>
+          <article class="card">
+            <h3>Замена оборудования</h3>
+            <p>Помогаем обновить устаревшие розетки, выключатели, защитные устройства и другие элементы электросистемы.</p>
+          </article>
+          <article class="card">
+            <h3>Модернизация сети</h3>
+            <p>Подготавливаем электросистему к изменению планировки, установке новой техники или увеличению нагрузки.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h2>Этапы работы</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>01. Осмотр</h3>
+            <p>Уточняем симптомы неисправности, историю проблемы и особенности объекта.</p>
+          </article>
+          <article class="card">
+            <h3>02. Диагностика</h3>
+            <p>Проверяем доступные элементы системы и определяем возможные причины неисправности.</p>
+          </article>
+          <article class="card">
+            <h3>03. Согласование</h3>
+            <p>Объясняем план ремонта, необходимые материалы и предварительную стоимость.</p>
+          </article>
+          <article class="card">
+            <h3>04. Ремонт и проверка</h3>
+            <p>Выполняем согласованные работы и проверяем результат перед завершением.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h2>Стоимость работ</h2>
+        <div class="note">
+          <strong>Цена зависит от характера неисправности и объёма работ.</strong>
+          <p>На стоимость влияют сложность диагностики, состояние существующей проводки, доступность участков и необходимость замены оборудования. Точную оценку можно дать после уточнения задачи и осмотра объекта.</p>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="contact">
+        <h2>Нужен ремонт электрики?</h2>
+        <p>Опишите проблему или расскажите, что хотите модернизировать. Обсудим возможные решения и объём работ.</p>
+        <a class="button" href="../../index.html#contact">Связаться с нами</a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container footer-inner">
+      <span>© ВОЛЬТ71 — электромонтажные работы</span>
+      <a href="../../index.html">На главную</a>
+    </div>
+  </footer>
+</body>
+</html>
