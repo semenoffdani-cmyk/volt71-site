@@ -973,6 +973,23 @@ footer{
     display:grid;
     place-items:center;
   }
+  /* Фотографии в карточках услуг */
+.service {
+  overflow: hidden;
+}
+
+.service-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.service:hover .service-image {
+  transform: scale(1.02);
 }
 </style>
 </head>
