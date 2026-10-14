@@ -42,5 +42,30 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+    <url>
+    <loc>https://volt71.ru/services/sockets-switches/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://volt71.ru/services/equipment-connection/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://volt71.ru/services/power-supply/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://volt71.ru/services/repair-modernization/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://volt71.ru/services/complete-electrical-installation/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
 </urlset>
