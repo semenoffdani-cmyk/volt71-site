@@ -3,329 +3,267 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Подключение бытового и коммерческого электрического оборудования, проверка линий питания и безопасного подключения.">
-  <title>Подключение оборудования — Вольт 71</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#111214">
+  <meta name="description" content="Подключение бытового и электротехнического оборудования. Монтаж, проверка и безопасный запуск. Вольт71.">
+  <title>Подключение оборудования | Вольт71</title>
   <style>
     :root {
-      --bg: #0f1114;
-      --card: #171a1f;
-      --text: #f5f6f8;
-      --muted: #9da3aa;
-      --line: #292e34;
-      --accent: #ffb300;
-      --accent-dark: #e39d00;
-      --max: 1180px;
+      --bg: #111214;
+      --panel: #1b1d20;
+      --yellow: #f5c542;
+      --text: #f4f4f4;
+      --muted: #a6a8ad;
+      --line: #33363b;
     }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font-family: "Manrope", sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
     }
-    a { color: inherit; }
-    .wrap {
-      width: min(var(--max), calc(100% - 40px));
+    a { color: inherit; text-decoration: none; }
+    .container {
+      width: min(1120px, calc(100% - 40px));
       margin: 0 auto;
     }
     header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(15,17,20,.96);
-      backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--line);
+      padding: 20px 0;
     }
-    .nav {
-      min-height: 74px;
+    .header-inner {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      align-items: center;
+      gap: 24px;
     }
     .logo {
-      color: var(--text);
-      text-decoration: none;
+      font-size: 24px;
       font-weight: 800;
-      font-size: 20px;
-      letter-spacing: -.04em;
+      letter-spacing: 1px;
     }
-    .logo span { color: var(--accent); }
-    .nav-links { display: flex; gap: 25px; }
-    .nav-links a, .phone {
-      color: #cfd4da;
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
-      transition: color .2s ease;
+    .logo span { color: var(--yellow); }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      color: var(--muted);
+      font-size: 14px;
     }
-    .nav-links a:hover, .phone:hover { color: var(--accent); }
-    .hero {
-      padding: 85px 0 90px;
-      background:
-        radial-gradient(ellipse at 78% 15%, rgba(255,179,0,.1), transparent 43%),
-        var(--bg);
-      border-bottom: 1px solid var(--line);
+    nav a:hover, .back:hover { color: var(--yellow); }
+    main { padding: 42px 0 80px; }
+    .back {
+      display: inline-block;
+      margin-bottom: 34px;
+      color: var(--muted);
+      font-size: 14px;
     }
-    .eyebrow, .section-label {
-      color: var(--accent);
-      font: 600 11px/1.5 "Roboto Mono", monospace;
-      letter-spacing: .14em;
+    .eyebrow {
+      color: var(--yellow);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
       text-transform: uppercase;
     }
     h1 {
-      max-width: 900px;
-      margin: 20px 0;
-      font-size: clamp(40px,6vw,72px);
-      line-height: 1.04;
-      letter-spacing: -.055em;
+      max-width: 850px;
+      margin: 12px 0 20px;
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
     }
-    .hero p {
-      max-width: 720px;
-      color: #b8bec6;
-      font-size: 17px;
+    h2 {
+      margin: 0 0 24px;
+      font-size: clamp(26px, 4vw, 36px);
+      line-height: 1.2;
+    }
+    h3 { margin: 0 0 12px; font-size: 19px; }
+    .intro {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 18px;
     }
     .actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 30px;
+      gap: 14px;
+      margin-top: 28px;
     }
-    .btn {
-      min-height: 48px;
+    .button {
       display: inline-flex;
       justify-content: center;
       align-items: center;
+      min-height: 48px;
       padding: 13px 22px;
-      border: 1px solid transparent;
-      border-radius: 7px;
-      font: 700 13px "Manrope", sans-serif;
-      text-decoration: none;
-      transition: .2s ease;
+      border: 1px solid var(--yellow);
+      border-radius: 6px;
+      background: var(--yellow);
+      color: #171717;
+      font-weight: 700;
+      transition: .2s;
     }
-    .btn-primary { background: var(--accent); color: #11151a; }
-    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
-    .btn-outline { border-color: #454c55; color: var(--text); }
-    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
-    .section { padding: 78px 0; border-bottom: 1px solid var(--line); }
-    .section-head { max-width: 760px; margin-bottom: 36px; }
-    h2 {
-      margin: 12px 0;
-      font-size: clamp(30px,4vw,48px);
-      line-height: 1.12;
-      letter-spacing: -.04em;
+    .button:hover { background: #ffda68; }
+    .button.secondary {
+      background: transparent;
+      color: var(--yellow);
     }
-    .section-head p, .muted { color: var(--muted); }
+    .button.secondary:hover {
+      background: var(--yellow);
+      color: #171717;
+    }
+    section { margin-top: 76px; }
     .grid {
       display: grid;
-      grid-template-columns: repeat(3,minmax(0,1fr));
-      gap: 15px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
     }
     .card {
       padding: 26px;
-      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+    }
+    .number {
+      margin-bottom: 18px;
+      color: var(--yellow);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .card p, .note p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .note {
+      padding: 26px;
+      border-left: 3px solid var(--yellow);
+      border-radius: 0 8px 8px 0;
+      background: var(--panel);
+    }
+    .note strong { color: var(--yellow); }
+    .contact {
+      padding: 38px;
       border: 1px solid var(--line);
       border-radius: 12px;
-      transition: border-color .2s ease, transform .2s ease;
+      background: var(--panel);
     }
-    .card:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .number { color: var(--accent); font: 600 11px "Roboto Mono", monospace; }
-    .card h3 { margin: 25px 0 10px; font-size: 19px; line-height: 1.3; }
-    .card p { margin: 0; color: var(--muted); font-size: 13px; }
-    .note {
-      margin-top: 24px;
-      padding: 20px 22px;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-left: 3px solid var(--accent);
-      border-radius: 9px;
+    .contact p {
+      max-width: 650px;
+      color: var(--muted);
+    }
+    footer {
+      padding: 26px 0;
+      border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: 13px;
     }
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4,minmax(0,1fr));
-      gap: 14px;
-    }
-    .step {
-      padding: 23px;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-    }
-    .step h3 { margin: 22px 0 8px; font-size: 17px; }
-    .step p { margin: 0; color: var(--muted); font-size: 13px; }
-    .contact-box {
-      padding: 32px;
-      background:
-        radial-gradient(ellipse at 100% 0%, rgba(255,179,0,.08), transparent 45%),
-        var(--card);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-    }
-    .contact-box p { max-width: 700px; color: var(--muted); }
-    footer { padding: 25px 0; color: var(--muted); font-size: 12px; }
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-    footer a { color: var(--muted); text-decoration: none; }
-    footer a:hover { color: var(--accent); }
-    @media (max-width: 800px) {
-      .grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
-      .steps { grid-template-columns: repeat(2,minmax(0,1fr)); }
-      .nav-links { gap: 12px; }
-    }
-    @media (max-width: 560px) {
-      .wrap { width: min(var(--max), calc(100% - 30px)); }
-      .nav { min-height: 64px; }
-      .nav-links { display: none; }
-      .hero { padding: 60px 0; }
-      .hero p { font-size: 15px; }
-      .section { padding: 58px 0; }
-      .grid, .steps { grid-template-columns: 1fr; }
-      .card { padding: 22px; }
-      .actions { flex-direction: column; }
-      .btn { width: 100%; }
-      .contact-box { padding: 23px; }
-      .footer-inner { align-items: flex-start; flex-direction: column; }
+    @media (max-width: 650px) {
+      .container { width: min(100% - 28px, 1120px); }
+      .header-inner { align-items: flex-start; flex-direction: column; }
+      nav { gap: 14px; }
+      main { padding-top: 28px; }
+      .grid { grid-template-columns: 1fr; }
+      .card, .contact { padding: 22px; }
+      section { margin-top: 56px; }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="wrap nav">
+    <div class="container header-inner">
       <a class="logo" href="../../index.html">ВОЛЬТ<span>71</span></a>
-      <nav class="nav-links" aria-label="Основная навигация">
+      <nav>
         <a href="../../index.html#services">Услуги</a>
-        <a href="../../index.html#about">О компании</a>
+        <a href="../../index.html#about">О нас</a>
         <a href="../../index.html#contact">Контакты</a>
       </nav>
-      <a class="phone" href="../../index.html#contact">Оставить заявку</a>
     </div>
   </header>
-  <main>
-    <section class="hero">
-      <div class="wrap">
-        <div class="eyebrow">Электромонтажные работы · Вольт 71</div>
-        <h1>Подключение оборудования</h1>
-        <p>
-          Подключение бытового и коммерческого электрического оборудования,
-          проверка питающих линий и оценка готовности точки подключения.
-          Состав работ определяем с учётом требований производителя и условий объекта.
-        </p>
+  <main class="container">
+    <a class="back" href="../../index.html#services">← Все услуги</a>
+    <div class="eyebrow">Электромонтажные работы</div>
+    <h1>Подключение оборудования</h1>
+    <p class="intro">
+      Подключаем электрическое и бытовое оборудование с учётом требований
+      производителя, параметров сети и условий эксплуатации. Проверяем
+      соединения и работоспособность перед запуском.
+    </p>
+    <div class="actions">
+      <a class="button" href="../../index.html#contact">Оставить заявку</a>
+      <a class="button secondary" href="../../index.html#services">Все услуги</a>
+    </div>
+    <section>
+      <h2>Что подключаем</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="number">01 / БЫТОВАЯ ТЕХНИКА</div>
+          <h3>Бытовое оборудование</h3>
+          <p>Подключение варочных панелей, духовых шкафов, вытяжек и другой техники с учётом требований к электропитанию.</p>
+        </article>
+        <article class="card">
+          <div class="number">02 / ЭЛЕКТРООБОРУДОВАНИЕ</div>
+          <h3>Электрические устройства</h3>
+          <p>Подключение оборудования к подготовленным линиям электроснабжения с проверкой соединений и защиты.</p>
+        </article>
+        <article class="card">
+          <div class="number">03 / ЗАМЕНА И ПЕРЕНОС</div>
+          <h3>Замена и переподключение</h3>
+          <p>Демонтаж старого и подключение нового оборудования, проверка состояния кабелей и точек подключения.</p>
+        </article>
+        <article class="card">
+          <div class="number">04 / ПРОВЕРКА</div>
+          <h3>Проверка работы</h3>
+          <p>Контроль подключения и проверка работоспособности оборудования после завершения электромонтажных работ.</p>
+        </article>
+      </div>
+    </section>
+    <section>
+      <h2>Как проходит работа</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="number">ШАГ 01</div>
+          <h3>Оценка задачи</h3>
+          <p>Уточняем тип оборудования, место установки и требования к электропитанию.</p>
+        </article>
+        <article class="card">
+          <div class="number">ШАГ 02</div>
+          <h3>Подготовка</h3>
+          <p>Проверяем доступную линию, параметры подключения и необходимые защитные устройства.</p>
+        </article>
+        <article class="card">
+          <div class="number">ШАГ 03</div>
+          <h3>Подключение</h3>
+          <p>Выполняем монтаж с соблюдением требований безопасности и производителя оборудования.</p>
+        </article>
+        <article class="card">
+          <div class="number">ШАГ 04</div>
+          <h3>Контроль</h3>
+          <p>Проверяем соединения и работу оборудования в пределах выполненных работ.</p>
+        </article>
+      </div>
+    </section>
+    <section>
+      <div class="note">
+        <strong>Стоимость работ</strong>
+        <p>Цена зависит от типа оборудования, сложности подключения, состояния электропроводки и необходимости подготовительных работ. Стоимость согласовывается до начала монтажа.</p>
+      </div>
+    </section>
+    <section>
+      <div class="contact">
+        <div class="eyebrow">Вольт71</div>
+        <h2>Нужно подключить оборудование?</h2>
+        <p>Расскажите, какое оборудование требуется подключить и где оно будет установлено. Поможем определить объём работ и согласовать дальнейшие действия.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="../../index.html#contact">Обсудить задачу</a>
-          <a class="btn btn-outline" href="../../index.html#services">Все услуги</a>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="section-label">Что выполняем</div>
-          <h2>Подключение под задачи объекта</h2>
-          <p>До начала работ уточняем характеристики оборудования, требования к питанию и состояние существующей электросети.</p>
-        </div>
-        <div class="grid">
-          <article class="card">
-            <div class="number">01</div>
-            <h3>Бытовое оборудование</h3>
-            <p>Подключение подготовленных точек питания для бытовой техники в соответствии с её требованиями.</p>
-          </article>
-          <article class="card">
-            <div class="number">02</div>
-            <h3>Коммерческое оборудование</h3>
-            <p>Подключение оборудования в офисных и коммерческих помещениях после оценки условий установки.</p>
-          </article>
-          <article class="card">
-            <div class="number">03</div>
-            <h3>Проверка линии питания</h3>
-            <p>Оценка доступной линии, защитных устройств и соответствия предполагаемой нагрузке.</p>
-          </article>
-          <article class="card">
-            <div class="number">04</div>
-            <h3>Подготовка точки</h3>
-            <p>Проверка расположения и готовности точки подключения перед установкой оборудования.</p>
-          </article>
-          <article class="card">
-            <div class="number">05</div>
-            <h3>Поиск проблем</h3>
-            <p>Проверка причин отсутствия питания и других неисправностей в пределах согласованного объёма работ.</p>
-          </article>
-          <article class="card">
-            <div class="number">06</div>
-            <h3>Контроль результата</h3>
-            <p>Проверка выполненного подключения и работоспособности в предусмотренном режиме.</p>
-          </article>
-        </div>
-        <div class="note">
-          Возможность подключения зависит от характеристик оборудования, состояния электросети,
-          наличия защитных устройств и требований производителя. Дополнительные работы и замена
-          компонентов согласуются до выполнения.
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="section-label">Этапы работы</div>
-          <h2>От проверки до подключения</h2>
-        </div>
-        <div class="steps">
-          <article class="step">
-            <div class="number">ШАГ 01</div>
-            <h3>Описание задачи</h3>
-            <p>Уточняем тип оборудования, его характеристики и место установки.</p>
-          </article>
-          <article class="step">
-            <div class="number">ШАГ 02</div>
-            <h3>Оценка условий</h3>
-            <p>Проверяем точку питания и соответствие линии предполагаемой нагрузке.</p>
-          </article>
-          <article class="step">
-            <div class="number">ШАГ 03</div>
-            <h3>Выполнение работ</h3>
-            <p>Выполняем согласованное подключение с соблюдением требований безопасности.</p>
-          </article>
-          <article class="step">
-            <div class="number">ШАГ 04</div>
-            <h3>Проверка</h3>
-            <p>Проверяем результат и информируем о выявленных ограничениях, если они есть.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="wrap">
-        <div class="contact-box">
-          <div class="section-label">Стоимость работ</div>
-          <h2>Оценим подключение оборудования</h2>
-          <p>
-            Стоимость зависит от типа оборудования, мощности, состояния точки питания,
-            необходимости прокладки отдельной линии и дополнительных защитных устройств.
-            Отправьте описание задачи, чтобы обсудить объём и порядок работ.
-          </p>
-          <div class="actions">
-            <a class="btn btn-primary" href="../../index.html#contact">Оставить заявку</a>
-            <a class="btn btn-outline" href="../../index.html#services">Вернуться к услугам</a>
-          </div>
+          <a class="button" href="../../index.html#contact">Связаться с нами</a>
+          <a class="button secondary" href="../../index.html#services">Посмотреть другие услуги</a>
         </div>
       </div>
     </section>
   </main>
   <footer>
-    <div class="wrap footer-inner">
-      <div>© Вольт 71 · Электромонтажные работы</div>
-      <a href="../../index.html">На главную</a>
-    </div>
+    <div class="container">© ВОЛЬТ71 · Электромонтажные работы</div>
   </footer>
 </body>
 </html>
