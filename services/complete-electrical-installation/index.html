@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Комплексный электромонтаж под ключ | Вольт71</title>
+  <meta name="description" content="Комплексный электромонтаж квартир, частных домов и коммерческих помещений. Планирование, монтаж электропроводки, подключение оборудования и проверка системы. Вольт71.">
+  <style>
+    :root {
+      --bg: #111214;
+      --panel: #1b1d20;
+      --text: #f4f4f4;
+      --muted: #b8bbc0;
+      --yellow: #f5c542;
+      --line: #33363b;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container {
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .logo span { color: var(--yellow); }
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    nav a:hover, .back:hover { color: var(--yellow); }
+    .hero { padding: 68px 0 54px; }
+    .back {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: var(--yellow);
+      font-size: 14px;
+    }
+    .eyebrow {
+      color: var(--yellow);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+    h1 {
+      max-width: 900px;
+      margin: 12px 0 20px;
+      font-size: clamp(34px, 6vw, 58px);
+      line-height: 1.1;
+    }
+    .hero p {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 14px 22px;
+      border-radius: 6px;
+      background: var(--yellow);
+      color: #171717;
+      font-weight: 800;
+    }
+    .button:hover { background: #ffd85e; }
+    section { padding: 42px 0; }
+    h2 {
+      margin: 0 0 22px;
+      font-size: clamp(26px, 4vw, 36px);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--yellow);
+      font-size: 19px;
+    }
+    .card p, .card li { color: var(--muted); }
+    .card ul { padding-left: 20px; margin-bottom: 0; }
+    .note {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+      color: var(--muted);
+    }
+    .note strong { color: var(--yellow); }
+    .contact {
+      margin: 30px 0 60px;
+      padding: 34px;
+      border-radius: 12px;
+      background: #202226;
+      border: 1px solid var(--line);
+    }
+    .contact p { color: var(--muted); }
+    footer {
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 650px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 44px; }
+      .contact { padding: 24px; }
+      nav { gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a class="logo" href="../../index.html">ВОЛЬТ<span>71</span></a>
+      <nav>
+        <a href="../../index.html#services">Услуги</a>
+        <a href="../../index.html#about">О компании</a>
+        <a href="../../index.html#contact">Контакты</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container hero">
+      <a class="back" href="../../index.html#services">← Все услуги</a>
+      <div class="eyebrow">Электромонтаж под ключ</div>
+      <h1>Комплексный электромонтаж</h1>
+      <p>Выполняем комплекс электромонтажных работ для квартир, частных домов и коммерческих помещений. Помогаем организовать процесс от планирования до подключения оборудования и проверки готовой системы.</p>
+      <a class="button" href="../../index.html#contact">Обсудить проект</a>
+    </div>
+    <section>
+      <div class="container">
+        <h2>Что входит в комплекс работ</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Планирование электрики</h3>
+            <p>Учитываем назначение помещений, расположение техники, освещения, розеток и предполагаемую нагрузку.</p>
+          </article>
+          <article class="card">
+            <h3>Монтаж электропроводки</h3>
+            <p>Прокладываем кабельные линии и выполняем необходимые соединения с учётом особенностей объекта.</p>
+          </article>
+          <article class="card">
+            <h3>Сборка и подключение щита</h3>
+            <p>Организуем распределение линий и устанавливаем предусмотренные проектом защитные устройства.</p>
+          </article>
+          <article class="card">
+            <h3>Розетки и освещение</h3>
+            <p>Устанавливаем и подключаем розетки, выключатели, светильники и другие элементы электросистемы.</p>
+          </article>
+          <article class="card">
+            <h3>Подключение оборудования</h3>
+            <p>Подготавливаем линии и подключаем предусмотренное задачей электрооборудование.</p>
+          </article>
+          <article class="card">
+            <h3>Проверка результата</h3>
+            <p>Проверяем выполненный монтаж и работоспособность установленных элементов перед завершением работ.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h2>Как организована работа</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>01. Обсуждение проекта</h3>
+            <p>Уточняем тип объекта, пожелания, сроки и объём необходимых работ.</p>
+          </article>
+          <article class="card">
+            <h3>02. План и смета</h3>
+            <p>Определяем состав работ, материалы и предварительную стоимость проекта.</p>
+          </article>
+          <article class="card">
+            <h3>03. Выполнение монтажа</h3>
+            <p>Выполняем согласованные работы поэтапно, с учётом условий на объекте.</p>
+          </article>
+          <article class="card">
+            <h3>04. Завершение и проверка</h3>
+            <p>Проверяем выполненные работы и передаём заказчику результат.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h2>Стоимость комплексного электромонтажа</h2>
+        <div class="note">
+          <strong>Стоимость рассчитывается индивидуально для каждого объекта.</strong>
+          <p>На цену влияют площадь помещения, сложность проекта, количество линий и точек подключения, тип оборудования, объём монтажа и условия выполнения работ. После обсуждения задачи можно определить состав работ и подготовить расчёт.</p>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="contact">
+        <h2>Планируете электромонтаж?</h2>
+        <p>Расскажите о своём объекте и планах. Обсудим объём работ и подходящий вариант реализации проекта.</p>
+        <a class="button" href="../../index.html#contact">Связаться с нами</a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container footer-inner">
+      <span>© ВОЛЬТ71 — электромонтажные работы</span>
+      <a href="../../index.html">На главную</a>
+    </div>
+  </footer>
+</body>
+</html>
