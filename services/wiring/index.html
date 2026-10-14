@@ -51,16 +51,16 @@
 </script>
 
 <style>
-:root{
-  --ink:#0b0d10;
-  --ink2:#12161b;
-  --paper:#f4f5f6;
-  --white:#fff;
-  --muted:#6e7680;
-  --line:#d9dde2;
-  --yellow:#ffb300;
-  --yellow2:#ffd45d;
-  --max:1180px;
+:root {
+  --ink: #0f1114;
+  --ink2: #080a0c;
+  --paper: #0f1114;
+  --white: #f5f6f8;
+  --muted: #9da3aa;
+  --line: #292e34;
+  --yellow: #ffb300;
+  --yellow2: #e39d00;
+  --max: 1180px;
 }
 
 *{
@@ -72,12 +72,12 @@ html{
   scroll-padding-top:80px;
 }
 
-body{
-  margin:0;
-  background:var(--paper);
-  color:#15191e;
-  font-family:Manrope,system-ui,sans-serif;
-  line-height:1.55;
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--white);
+  font-family: "Manrope", sans-serif;
+  line-height: 1.6;
 }
 
 .wrap{
@@ -89,14 +89,14 @@ a{
   color:inherit;
 }
 
-header{
-  position:sticky;
-  top:0;
-  z-index:50;
-  background:rgba(11,13,16,.96);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid #242a31;
-  color:#fff;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(15, 17, 20, 0.96);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--line);
+  color: var(--white);
 }
 
 .nav{
@@ -140,16 +140,17 @@ nav{
 }
 
 nav a,
-.phone{
-  color:#cfd4da;
-  text-decoration:none;
-  font-size:13px;
-  font-weight:600;
+.phone {
+  color: #cfd4da;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 nav a:hover,
-.phone:hover{
-  color:#fff;
+.phone:hover {
+  color: #ffb300;
 }
 
 .phone{
@@ -157,10 +158,12 @@ nav a:hover,
   white-space:nowrap;
 }
 
-.hero{
-  background:var(--ink);
-  color:#fff;
-  padding:82px 0 90px;
+.hero {
+  background:
+    radial-gradient(ellipse at 75% 20%, rgba(255, 179, 0, 0.09), transparent 45%),
+    var(--ink);
+  color: var(--white);
+  padding: 82px 0 90px;
 }
 
 .hero-grid{
@@ -221,13 +224,16 @@ nav a:hover,
   transform:translateY(-1px);
 }
 
-.outline{
-  border-color:#4a525b;
-  color:#fff;
+.outline {
+  background: transparent;
+  border-color: #ffb300;
+  color: #f5f6f8;
 }
 
-.outline:hover{
-  border-color:#fff;
+.outline:hover {
+  background: rgba(255, 179, 0, 0.08);
+  border-color: #ffb300;
+  color: #ffb300;
 }
 
 .points{
@@ -269,8 +275,9 @@ nav a:hover,
   color:#aeb5bd;
 }
 
-.section{
-  padding:92px 0;
+.section {
+  padding: 92px 0;
+  border-bottom: 1px solid var(--line);
 }
 
 .head{
@@ -291,9 +298,9 @@ nav a:hover,
   margin:14px 0;
 }
 
-.head p{
-  color:#68717b;
-  max-width:720px;
+.head p {
+  color: var(--muted);
+  max-width: 720px;
 }
 
 .grid{
@@ -302,29 +309,36 @@ nav a:hover,
   gap:14px;
 }
 
-.card{
-  background:#fff;
-  border:1px solid #e0e3e7;
-  border-radius:13px;
-  padding:27px;
-  min-height:220px;
+.card {
+  background: #171a1f;
+  border: 1px solid #292e34;
+  border-radius: 13px;
+  padding: 27px;
+  min-height: 220px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
-.card b{
-  font:600 10px "Roboto Mono";
-  color:#8a929a;
+.card:hover {
+  border-color: #ffb300;
+  transform: translateY(-3px);
 }
 
-.card h3{
-  margin:35px 0 10px;
-  font-size:20px;
-  line-height:1.2;
+.card b {
+  font: 600 10px "Roboto Mono", monospace;
+  color: #ffb300;
 }
 
-.card p{
-  margin:0;
-  font-size:13px;
-  color:#6a727b;
+.card h3 {
+  margin: 35px 0 10px;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #f5f6f8;
+}
+
+.card p {
+  margin: 0;
+  font-size: 13px;
+  color: #9da3aa;
 }
 
 .dark{
@@ -342,11 +356,11 @@ nav a:hover,
   gap:18px;
 }
 
-.dark-card{
-  border:1px solid #2b323a;
-  border-radius:13px;
-  padding:30px;
-  background:#11161b;
+.dark-card {
+  border: 1px solid #292e34;
+  border-radius: 13px;
+  padding: 30px;
+  background: #171a1f;
 }
 
 .dark-card h3{
@@ -366,29 +380,35 @@ nav a:hover,
   gap:12px;
 }
 
-.step{
-  background:#fff;
-  border:1px solid #e0e3e7;
-  border-radius:12px;
-  padding:24px;
-  min-height:205px;
+.step {
+  background: #171a1f;
+  border: 1px solid #292e34;
+  border-radius: 12px;
+  padding: 24px;
+  min-height: 205px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
-.step b{
-  font:600 11px "Roboto Mono";
-  color:#9299a1;
+.step:hover {
+  border-color: #ffb300;
+  transform: translateY(-3px);
 }
 
-.step h3{
-  margin-top:37px;
-  font-size:18px;
+.step b {
+  font: 600 11px "Roboto Mono", monospace;
+  color: #ffb300;
 }
 
-.step p{
-  font-size:12px;
-  color:#6c747d;
+.step h3 {
+  margin-top: 37px;
+  font-size: 18px;
+  color: #f5f6f8;
 }
 
+.step p {
+  font-size: 12px;
+  color: #9da3aa;
+}
 .note{
   margin-top:24px;
   padding:20px 22px;
@@ -432,19 +452,20 @@ footer{
   gap:25px;
 }
 
-.foot p{
-  font-size:11px;
-  color:#78808a;
+.foot p {
+  font-size: 11px;
+  color: #9da3aa;
 }
 
-.foot a{
-  color:#78808a;
-  font-size:11px;
-  text-decoration:none;
+.foot a {
+  color: #9da3aa;
+  font-size: 11px;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.foot a:hover{
-  color:#fff;
+.foot a:hover {
+  color: #ffb300;
 }
 
 @media(max-width:900px){
