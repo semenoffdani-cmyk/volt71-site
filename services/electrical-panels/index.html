@@ -1,706 +1,298 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-
-  <title>Монтаж электрощита в Туле — ВОЛЬТ71</title>
-
-  <meta
-    name="description"
-    content="Монтаж и сборка электрощитов в Туле и Тульской области: распределительные щиты, автоматы, защитные устройства, подключение линий и модернизация электрики. ВОЛЬТ71."
-  >
-
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link
-    rel="canonical"
-    href="https://semenoffdani-cmyk.github.io/volt71-site/services/electrical-panels/"
-  >
-
-  <meta property="og:locale" content="ru_RU">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Монтаж электрощита в Туле — ВОЛЬТ71">
-  <meta
-    property="og:description"
-    content="Сборка, монтаж и модернизация электрощитов в Туле и Тульской области."
-  >
-  <meta
-    property="og:url"
-    content="https://semenoffdani-cmyk.github.io/volt71-site/services/electrical-panels/"
-  >
-
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ffb300'/%3E%3Cpath d='M36 7 18 36h12l-3 21 19-30H34z' fill='%230b0d10'/%3E%3C/svg%3E">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Roboto+Mono:wght@500;600&display=swap"
-    rel="stylesheet"
-  >
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Электрощиты и сборка щитов | Вольт71</title>
+  <meta name="description" content="Сборка и монтаж электрических щитов, установка защитных автоматов, распределение электрических линий и модернизация щитового оборудования. Вольт71.">
   <style>
     :root {
-      --bg: #0f1114;
-      --bg2: #080a0c;
-      --card: #171a1f;
-      --text: #f5f6f8;
-      --muted: #9da3aa;
-      --line: #292e34;
-      --accent: #ffb300;
-      --accent-dark: #e39d00;
-      --max: 1180px;
+      --bg: #111214;
+      --panel: #1b1d20;
+      --text: #f4f4f4;
+      --muted: #b8bbc0;
+      --yellow: #f5c542;
+      --line: #33363b;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font-family: "Manrope", sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
     }
-
     a {
       color: inherit;
       text-decoration: none;
     }
-
     .container {
-      width: min(var(--max), calc(100% - 40px));
+      width: min(1100px, calc(100% - 32px));
       margin: 0 auto;
     }
-
     header {
       border-bottom: 1px solid var(--line);
-      background: rgba(8, 10, 12, .94);
+      padding: 18px 0;
     }
-
     .header-inner {
-      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      gap: 20px;
+      flex-wrap: wrap;
     }
-
     .logo {
       font-size: 24px;
       font-weight: 800;
-      letter-spacing: -.04em;
+      letter-spacing: 1px;
     }
-
-    .logo span {
-      color: var(--accent);
-    }
-
-    .back {
+    .logo span { color: var(--yellow); }
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
       color: var(--muted);
       font-size: 14px;
-      font-weight: 700;
     }
-
+    nav a:hover,
     .back:hover {
-      color: var(--text);
+      color: var(--yellow);
     }
-
     .hero {
-      padding: 86px 0 72px;
-      border-bottom: 1px solid var(--line);
-      background:
-        radial-gradient(circle at 80% 20%, rgba(255,179,0,.10), transparent 30%),
-        var(--bg2);
+      padding: 68px 0 54px;
     }
-
+    .back {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: var(--yellow);
+      font-size: 14px;
+    }
     .eyebrow {
-      margin-bottom: 18px;
-      color: var(--accent);
-      font-family: "Roboto Mono", monospace;
-      font-size: 13px;
+      color: var(--yellow);
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: .12em;
+      letter-spacing: 2px;
+      font-size: 12px;
     }
-
     h1 {
       max-width: 850px;
-      margin: 0 0 24px;
-      font-size: clamp(40px, 6vw, 72px);
-      line-height: 1.02;
-      letter-spacing: -.055em;
+      margin: 12px 0 20px;
+      font-size: clamp(34px, 6vw, 58px);
+      line-height: 1.1;
     }
-
     .hero p {
-      max-width: 760px;
-      margin: 0;
-      color: var(--muted);
-      font-size: 19px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 34px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 52px;
-      padding: 0 22px;
-      border-radius: 10px;
-      font-weight: 800;
-      transition: .2s ease;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #111;
-    }
-
-    .btn-primary:hover {
-      background: var(--accent-dark);
-    }
-
-    .btn-secondary {
-      border: 1px solid var(--line);
-      background: #15181c;
-    }
-
-    .btn-secondary:hover {
-      border-color: #444a52;
-    }
-
-    section {
-      padding: 78px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .section-label {
-      margin-bottom: 12px;
-      color: var(--accent);
-      font-family: "Roboto Mono", monospace;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-    }
-
-    h2 {
-      max-width: 800px;
-      margin: 0 0 18px;
-      font-size: clamp(30px, 4vw, 48px);
-      line-height: 1.08;
-      letter-spacing: -.04em;
-    }
-
-    .lead {
-      max-width: 760px;
-      margin: 0 0 34px;
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .card {
-      padding: 26px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: var(--card);
-    }
-
-    .card-number {
-      color: var(--accent);
-      font-family: "Roboto Mono", monospace;
-      font-size: 13px;
-      margin-bottom: 24px;
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 20px;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .steps {
-      display: grid;
-      gap: 12px;
-      max-width: 900px;
-    }
-
-    .step {
-      display: grid;
-      grid-template-columns: 60px 1fr;
-      gap: 20px;
-      padding: 22px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .step:last-child {
-      border-bottom: 0;
-    }
-
-    .step-number {
-      color: var(--accent);
-      font-family: "Roboto Mono", monospace;
-      font-weight: 600;
-    }
-
-    .step h3 {
-      margin: 0 0 6px;
-      font-size: 19px;
-    }
-
-    .step p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .note {
-      max-width: 850px;
-      margin-top: 28px;
-      padding: 22px 24px;
-      border-left: 3px solid var(--accent);
-      background: #15181c;
-      color: var(--muted);
-    }
-
-    .cta {
-      padding: 90px 0;
-      background: var(--accent);
-      color: #101010;
-    }
-
-    .cta h2 {
       max-width: 720px;
-    }
-
-    .cta p {
-      max-width: 700px;
-      margin: 0 0 28px;
+      color: var(--muted);
       font-size: 18px;
     }
-
-    .cta .btn-primary {
-      background: #101010;
-      color: #fff;
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 14px 22px;
+      border-radius: 6px;
+      background: var(--yellow);
+      color: #171717;
+      font-weight: 800;
     }
-
-    .cta .btn-secondary {
-      border-color: rgba(0,0,0,.25);
-      background: transparent;
-      color: #101010;
+    .button:hover { background: #ffd85e; }
+    section { padding: 42px 0; }
+    h2 {
+      margin: 0 0 22px;
+      font-size: clamp(26px, 4vw, 36px);
     }
-
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--yellow);
+      font-size: 19px;
+    }
+    .card p,
+    .card li {
+      color: var(--muted);
+    }
+    .card ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+    .note {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+      color: var(--muted);
+    }
+    .note strong { color: var(--yellow); }
+    .contact {
+      margin: 30px 0 60px;
+      padding: 34px;
+      border-radius: 12px;
+      background: #202226;
+      border: 1px solid var(--line);
+    }
+    .contact p { color: var(--muted); }
     footer {
-      padding: 32px 0 110px;
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: 14px;
     }
-
-    footer .footer-inner {
+    .footer-inner {
       display: flex;
       justify-content: space-between;
-      gap: 20px;
+      gap: 16px;
       flex-wrap: wrap;
     }
-
-    footer a:hover {
-      color: var(--text);
-    }
-
-    @media (max-width: 800px) {
-      .container {
-        width: min(var(--max), calc(100% - 28px));
-      }
-
-      .hero {
-        padding: 62px 0 56px;
-      }
-
-      section {
-        padding: 58px 0;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .header-inner {
-        min-height: 66px;
-      }
-
-      .back {
-        font-size: 13px;
-      }
-
-      h1 {
-        font-size: clamp(38px, 12vw, 58px);
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-
-      .buttons {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .step {
-        grid-template-columns: 44px 1fr;
-      }
-
-      .cta {
-        padding: 68px 0;
-      }
+    @media (max-width: 650px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 44px; }
+      .contact { padding: 24px; }
+      nav { gap: 12px; }
     }
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Монтаж электрощита",
-    "serviceType": "Монтаж и сборка электрощитов",
-    "description": "Монтаж, сборка и модернизация электрощитов в Туле и Тульской области.",
-    "provider": {
-      "@type": "Electrician",
-      "name": "ВОЛЬТ71",
-      "telephone": "+79398597149",
-      "url": "https://semenoffdani-cmyk.github.io/volt71-site/"
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Тула"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Тульская область"
-      }
-    ]
-  }
-  </script>
 </head>
-
 <body>
-
-<header>
-  <div class="container header-inner">
-    <a class="logo" href="../../">ВОЛЬТ<span>71</span></a>
-    <a class="back" href="../../">← На главную</a>
-  </div>
-</header>
-
-<main>
-
-  <section class="hero">
-    <div class="container">
-      <div class="eyebrow">ВОЛЬТ71 / ЭЛЕКТРОЩИТЫ</div>
-
-      <h1>Монтаж электрощита в Туле</h1>
-
+  <header>
+    <div class="container header-inner">
+      <a class="logo" href="../../index.html">ВОЛЬТ<span>71</span></a>
+      <nav>
+        <a href="../../index.html#services">Услуги</a>
+        <a href="../../index.html#about">О компании</a>
+        <a href="../../index.html#contact">Контакты</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container hero">
+      <a class="back" href="../../index.html#services">← Все услуги</a>
+      <div class="eyebrow">Распределение и защита электросети</div>
+      <h1>Электрощиты и сборка щитов</h1>
       <p>
-        Сборка, монтаж и модернизация электрощитов
-        для частных домов, складов и коммерческих объектов.
-        От отдельных линий до полноценного распределения электропитания.
+        Выполняем сборку, монтаж и модернизацию электрических щитов
+        для квартир, частных домов и коммерческих помещений.
+        Организуем распределение электрических линий и установку
+        защитных устройств с учётом особенностей объекта и нагрузки.
       </p>
-
-      <div class="buttons">
-        <a class="btn btn-primary" href="../../#contact">
-          Рассчитать стоимость
-        </a>
-
-        <a class="btn btn-secondary" href="tel:+79398597149">
-          Позвонить
-        </a>
-      </div>
+      <a class="button" href="../../index.html#contact">
+        Обсудить проект
+      </a>
     </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-label">Что выполняем</div>
-
-      <h2>Электрощит под задачи конкретного объекта</h2>
-
-      <p class="lead">
-        Электрощит должен соответствовать количеству линий,
-        нагрузке и особенностям электроснабжения объекта.
-        Выполняем монтаж и необходимые работы с существующими
-        и новыми щитами.
-      </p>
-
-      <div class="grid">
-
-        <article class="card">
-          <div class="card-number">01</div>
-          <h3>Сборка электрощита</h3>
-          <p>
-            Сборка распределительного щита
-            под согласованный состав и количество линий.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-number">02</div>
-          <h3>Монтаж на объекте</h3>
-          <p>
-            Установка электрощита и подключение
-            необходимых кабельных линий.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-number">03</div>
-          <h3>Автоматы и защита</h3>
-          <p>
-            Установка коммутационной и защитной аппаратуры
-            в соответствии с задачами электроснабжения.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-number">04</div>
-          <h3>Разделение линий</h3>
-          <p>
-            Организация отдельных линий
-            для освещения, розеток и оборудования.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-number">05</div>
-          <h3>Подключение кабелей</h3>
-          <p>
-            Подключение отходящих и питающих линий
-            в рамках выполняемого электромонтажа.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-number">06</div>
-          <h3>Модернизация щита</h3>
-          <p>
-            Перенос, расширение и модернизация
-            существующего электрощита.
-          </p>
-        </article>
-
-      </div>
-
-      <div class="note">
-        Состав электрощита зависит от объекта, количества линий,
-        нагрузки и состояния существующей электрики.
-        Поэтому стоимость рассчитывается после понимания конкретной задачи.
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-label">Где выполняем</div>
-
-      <h2>Электрощиты для разных объектов</h2>
-
-      <div class="grid">
-
-        <article class="card">
-          <h3>Частный дом</h3>
-          <p>
-            Распределение линий дома, освещение,
-            розетки и подключение оборудования.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Склад</h3>
-          <p>
-            Питание складских зон, освещения,
-            розеток и оборудования.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Коммерческий объект</h3>
-          <p>
-            Электроснабжение помещений,
-            рабочих зон и отдельных потребителей.
-          </p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-label">Как работаем</div>
-
-      <h2>От задачи до готового электрощита</h2>
-
-      <div class="steps">
-
-        <div class="step">
-          <div class="step-number">01</div>
-          <div>
-            <h3>Обсуждаем объект</h3>
+    <section>
+      <div class="container">
+        <h2>Что выполняем</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Сборка электрощитов</h3>
             <p>
-              Вы рассказываете, для какого объекта нужен щит
-              и какие задачи необходимо решить.
+              Комплектуем и собираем электрические щиты
+              в соответствии с задачами объекта и согласованной схемой.
             </p>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="step-number">02</div>
-          <div>
-            <h3>Определяем линии</h3>
+          </article>
+          <article class="card">
+            <h3>Установка защитных устройств</h3>
             <p>
-              Разбираемся с существующими или планируемыми
-              линиями электроснабжения.
+              Устанавливаем автоматические выключатели и другие
+              предусмотренные проектом устройства защиты.
             </p>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="step-number">03</div>
-          <div>
-            <h3>Согласовываем работы</h3>
+          </article>
+          <article class="card">
+            <h3>Распределение линий</h3>
             <p>
-              Определяем необходимый объём монтажа,
-              подключения или модернизации.
+              Организуем подключение отдельных групп электропроводки,
+              освещения, розеток и оборудования.
             </p>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="step-number">04</div>
-          <div>
-            <h3>Выполняем монтаж</h3>
+          </article>
+          <article class="card">
+            <h3>Замена и модернизация</h3>
             <p>
-              Выполняем сборку, установку и подключение
-              электрощита в рамках согласованных работ.
+              Помогаем обновить устаревший щит, заменить оборудование
+              и адаптировать систему к изменившимся потребностям.
             </p>
-          </div>
+          </article>
         </div>
-
-        <div class="step">
-          <div class="step-number">05</div>
-          <div>
-            <h3>Проверяем результат</h3>
-            <p>
-              Проверяем выполненные соединения и готовность
-              системы к дальнейшей эксплуатации.
-            </p>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-label">Почему ВОЛЬТ71</div>
-
-      <h2>Технический подход без лишней сложности</h2>
-
-      <div class="grid">
-
-        <article class="card">
-          <h3>Практический опыт</h3>
-          <p>
-            Большой практический опыт выполнения
-            электромонтажных работ.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Понимание объекта</h3>
-          <p>
-            Электрощит рассматривается как часть
-            всей системы электроснабжения объекта.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Аккуратный монтаж</h3>
-          <p>
-            Важны порядок, понятная организация линий
-            и аккуратное выполнение работ.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Понятная стоимость</h3>
-          <p>
-            Объём работ обсуждается до начала монтажа
-            с учётом особенностей конкретного объекта.
-          </p>
-        </article>
-
+    </section>
+    <section>
+      <div class="container">
+        <h2>Этапы работы</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>01. Осмотр и задачи</h3>
+            <p>
+              Уточняем особенности объекта, существующую схему
+              электроснабжения и предполагаемые нагрузки.
+            </p>
+          </article>
+          <article class="card">
+            <h3>02. Подбор оборудования</h3>
+            <p>
+              Определяем состав щита, количество линий,
+              необходимые устройства и материалы.
+            </p>
+          </article>
+          <article class="card">
+            <h3>03. Сборка и монтаж</h3>
+            <p>
+              Выполняем сборку щита, установку компонентов
+              и подключение предусмотренных электрических линий.
+            </p>
+          </article>
+          <article class="card">
+            <h3>04. Проверка</h3>
+            <p>
+              Проверяем соединения и работоспособность смонтированной
+              системы в соответствии с объёмом работ.
+            </p>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="cta">
+    </section>
+    <section>
+      <div class="container">
+        <h2>Стоимость работ</h2>
+        <div class="note">
+          <strong>
+            Стоимость зависит от комплектации и сложности щита.
+          </strong>
+          <p>
+            На цену влияют количество электрических линий,
+            число и тип защитных устройств, размеры корпуса,
+            необходимость демонтажа старого оборудования
+            и объём подключения. Стоимость материалов и работ
+            уточняется при согласовании проекта.
+          </p>
+        </div>
+      </div>
+    </section>
     <div class="container">
-      <h2>Нужен электрощит для дома, склада или коммерческого объекта?</h2>
-
-      <p>
-        Расскажите, что необходимо сделать.
-        Можно отправить описание задачи, фотографии
-        или план — обсудим необходимый объём работ.
-      </p>
-
-      <div class="buttons">
-        <a class="btn btn-primary" href="../../#contact">
-          Рассчитать стоимость
-        </a>
-
-        <a class="btn btn-secondary" href="tel:+79398597149">
-          +7 (939) 859-71-49
+      <div class="contact">
+        <h2>Нужен новый электрощит?</h2>
+        <p>
+          Расскажите о своём объекте и задачах.
+          Обсудим комплектацию, объём монтажа
+          и подходящий вариант организации электроснабжения.
+        </p>
+        <a class="button" href="../../index.html#contact">
+          Связаться с нами
         </a>
       </div>
     </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container footer-inner">
-    <div>© ВОЛЬТ71 — электромонтаж в Туле</div>
-
-    <div>
-      <a href="../../">Главная</a>
-      &nbsp;·&nbsp;
-      <a href="../../privacy.html">Политика обработки данных</a>
+  </main>
+  <footer>
+    <div class="container footer-inner">
+      <span>© ВОЛЬТ71 — электромонтажные работы</span>
+      <a href="../../index.html">На главную</a>
     </div>
-  </div>
-</footer>
-
+  </footer>
 </body>
 </html>
