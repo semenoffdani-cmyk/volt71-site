@@ -989,11 +989,17 @@ footer{
 .service-image {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 20px;
   transition: transform 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .service-image {
+    aspect-ratio: 1 / 1;
+  }
 }
 
 .service:hover .service-image {
